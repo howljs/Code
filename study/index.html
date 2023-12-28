@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".productthumbnail").click(function () {
+          var img = $(this).attr("src");
+          $(".productlarge")
+            .fadeOut(400, function () {
+              $(".productlarge").attr("src", img);
+            })
+            .fadeIn(400);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-12 mt-4">
+          <div class="row">
+            <div class="col-2 d-md-block d-none">
+              <img src="https://picsum.photos/200" class="productthumbnail" />
+              <img src="https://picsum.photos/300" class="productthumbnail" />
+              <img src="https://picsum.photos/400" class="productthumbnail" />
+              <img src="https://picsum.photos/500" class="productthumbnail" />
+            </div>
+            <div class="col-md-10 col-12">
+              <img src="https://picsum.photos/200" class="productlarge" />
+            </div>
+            <div class="col-12 d-md-none d-block mt-4">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <img
+                    src="https://picsum.photos/200"
+                    class="productthumbnail thumbnailhorizontal"
+                  />
+                  <img
+                    src="https://picsum.photos/300"
+                    class="productthumbnail thumbnailhorizontal"
+                  />
+                  <img
+                    src="https://picsum.photos/400"
+                    class="productthumbnail thumbnailhorizontal"
+                  />
+                  <img
+                    src="https://picsum.photos/500"
+                    class="productthumbnail thumbnailhorizontal"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12 mt-4">
+          <h3>Lata Classic Bag HN88</h3>
+          <div class="d-flex align-items-center">
+            <i class="fa fa-star starticon"></i>
+            <i class="fa fa-star starticon"></i>
+            <i class="fa fa-star starticon"></i>
+            <i class="fa fa-star starticon"></i>
+            <i class="fa fa-star starticon"></i>
+            <span class="totalstar">(127)</span>
+          </div>
+          <h4 class="price">$ 85.00</h4>
+          <span>Product type: Bag</span>
+          <div class="choosecolor">
+            <span>Color:</span>
+            <div class="d-flex" id="colorlist">
+              <div class="color selectedcolor" id="color1"></div>
+              <div class="color" id="color2"></div>
+              <div class="color" id="color3"></div>
+              <div class="color" id="color4"></div>
+            </div>
+          </div>
+          <div class="d-flex buttons">
+            <button class="addtocart">ADD TO CART</button>
+            <button class="buyitnow">BUY IT NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

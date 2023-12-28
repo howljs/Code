@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FAQs</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+
+  <!-- link css -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/icons.css" />
+  <link rel="stylesheet" href="css/FAQs.css" />
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $(".tablinks").click(function () {
+        $(".tablinks").removeClass("active");
+        $(this).addClass("active");
+        $(".tabcontent").css("display", "none");
+        var target = $(this).attr("data-target");
+        console.log(target);
+        $("#" + target).css("display", "block");
+      });
+
+      $("#sendEmail").click(function () {
+        $("html, body").animate(
+          {
+            scrollTop: $("#contactBox").offset().top - 150,
+          },
+          1000
+        );
+      });
+    });
+  </script>
+  <!-- js navbar -->
+  <script>
+    function openNav() {
+      $("#sidebarMobile").css("width", "256px");
+      $("#overlay").css("display", "block");
+    }
+
+    function closeNav() {
+      $("#sidebarMobile").css("width", "0");
+      $("#overlay").css("display", "none");
+      $(".dropdown-mobile a.active").each(function () {
+        $(this).parent().find(".dropdown-mobile-content").fadeOut()
+        $(this).removeClass("active");
+      });
+    }
+
+    $(document).ready(function () {
+      $(".dropdown-mobile a").click(function () {
+        $(this).parent().find(".dropdown-mobile-content").fadeToggle()
+        if ($(this).hasClass('active')) {
+          $(this).removeClass('active');
+        } else {
+          $(this).addClass('active');
+        }
+      });
+    });
+  </script> <!-- js navbar -->
+
+</head>
+
+<body>
+  <!-- TOP BTN -->
+  <button id="scroll-to-top" title="Go to top"><span class="icon-top-btn"></span></button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top navbar-container">
+    <div class="container">
+      <span class="icon-menu navbar-toggle-icon d-md-none" onclick="openNav()"></span>
+      <a class="navbar-brand navbar-brand-container" href="Home.html"><img src="imgs/logo-viatrips.svg"
+          class="navbar-logo" /></a>
+      <div class="d-none d-md-block mx-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Tour</a>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Detail.html">Spring tour</a>
+              <a class="dropdown-item" href="#">Summer tour</a>
+              <a class="dropdown-item" href="#">Autumn tour</a>
+              <a class="dropdown-item" href="#">Winter tour</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Planning</a>
+
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Plan.html">Your plan</a>
+              <a class="dropdown-item" href="#">Suggestion</a>
+              <a class="dropdown-item" href="#">Plan a trip</a>
+            </div>
+          </li>
+          <li class="nav-item align-items-center d-flex">
+            <a class="nav-link" href="Mytrip.html">My Trip</a>
+          </li>
+          <li class="nav-item align-items-center d-flex">
+            <a class="nav-link" href="Blog.html">Blogs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-nav ml-auto ml-md-0">
+        <div class="d-flex justify-content-center">
+          <a class="nav-link" href="Wishlist.html"><span class="icon-favorite navbar-icon"></span></a>
+          <a class="nav-link" href="Login.html"><span class="icon-user navbar-icon"></span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="overlay" onclick="closeNav()"></div>
+  <div class="sidebar" id="sidebarMobile">
+    <div class="sidebar-content">
+      <div>
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()"><span class="icon-menu-open"></span></a>
+        <a href="Home.html"><span class="icon-home sidebar-icon"></span>Home</a>
+        <div class="dropdown-mobile">
+          <a href="javascript:void(0)" class="dropdown-link"><span class="icon-tour sidebar-icon"></span>Tour</a>
+          <div class="dropdown-mobile-content">
+            <a href="Detail.html">Spring tour</a>
+            <a href="#">Summer tour</a>
+            <a href="#">Autumn tour</a>
+            <a href="#">Winter tour</a>
+          </div>
+        </div>
+        <div class="dropdown-mobile">
+          <a href="javascript:void(0)" class="dropdown-link"><span
+              class="icon-shopping-list sidebar-icon"></span>Planning</a>
+          <div class="dropdown-mobile-content">
+            <a href="Plan.html">Your plan</a>
+            <a href="#">Suggestion</a>
+            <a href="#">Plan a trip</a>
+          </div>
+        </div>
+
+        <a href="Mytrip.html"><span class="icon-ticket sidebar-icon"></span>My Trip</a>
+        <a href="Blog.html"><span class="icon-blog sidebar-icon"></span>Blogs</a>
+      </div>
+      <a href="Login.html" class="btn btn-outline-primary primary-button d-flex w-100 signin-btn">
+        <span class="icon-login signin-icon"></span>
+        Sign in</a>
+    </div>
+  </div>
+
+
+  <!-- Banner -->
+  <div class="container-fluid banner-container d-none d-md-block">
+    <img class="img-fluid" src="imgs/banner-FAQs.jpg" />
+    <div class="bannerFAQs">
+      <div class="container">
+        <h1 class="bannertitleh1-FAQs">You've got questions?</h1>
+        <h1 class="bannertitleh1-FAQs">We've got answers!</h1>
+        <h3 class="bannertitleh2-FAQs">
+          Everything you need to know about the product, service and billing.
+          <br />Can't find the answer you're looking for?
+        </h3>
+        <div class="row align-items-center justify-content-center">
+          <button class="btnbanner-FAQs col-xl-3 col-lg-4 col-md-5 d-none d-lg-block" type="button">
+            Chat with us
+          </button>
+          <div class="mx-2"></div>
+          <button id="sendEmail" class="btnbanner-FAQs2 d-none d-lg-block" type="button">
+            Send your question via email
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- breadcrumb -->
+  <nav aria-label="breadcrumb" class="my-3">
+    <div class="container breadcrumb-container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="Home.html"><span class="icon-home breadcrumb-icon"></span></a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          FAQs
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- content -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex col-md-4 flex-md-column">
+        <button class="btn tablinks active" data-target="Tour">
+          <div class="d-flex align-items-center">
+            <span class="icon-tour tab-icon" id="icontab-FAQs"></span>Tour
+          </div>
+        </button>
+        <button class="btn tablinks" data-target="GroupBooking">
+          <div class="d-flex align-items-center">
+            <span class="icon-group-user tab-icon" id="icontab-FAQs"></span>Group Booking
+          </div>
+        </button>
+        <button class="btn tablinks" data-target="Planning">
+          <div class="d-flex align-items-center">
+            <span class="icon-shopping-list tab-icon" id="icontab-FAQs"></span>Planning
+          </div>
+        </button>
+      </div>
+
+      <div class="col-12 col-md-8 tab-content">
+        <div id="Tour" class="tabcontent" style="display: block;">
+          <div class="container title-container">
+            <div class="d-flex title-index">
+              <h2>Tour</h2>
+              <div class="underline-title"></div>
+            </div>
+          </div>
+          <div id="tourAccordion">
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingOne">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseOne" aria-expanded="false"
+                    aria-controls="tourCollapseOne">
+                    What are the conditions for registering for a tour?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseOne" class="collapse" aria-labelledby="tourHeadingOne" data-parent="#tourAccordion">
+                <div class="card-body">
+                  To register for a tour, customers need to prepare their
+                  Identity Card (still valid for use) for domestic tours,
+                  and Passport (still valid for over 6 months) for overseas
+                  tours. Moreover, for certain countries, customers will
+                  also need to prepare additional documents to apply for a
+                  visa, as required by the Embassy/Consulate regulations.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingTwo">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseTwo" aria-expanded="false"
+                    aria-controls="tourCollapseTwo">
+                    How long in advance do I need to register for a
+                    tour?
+                    How long in advance do I need to prepare the
+                    documents?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseTwo" class="collapse" aria-labelledby="tourHeadingTwo" data-parent="#tourAccordion">
+                <div class="card-body">
+                  Dear customer, to ensure a good seat and a well-prepared
+                  itinerary, you should register at least 1 month in advance
+                  compared to the departure date. Specifically for tours
+                  that require a visa application, you will need to prepare
+                  documents to apply for a visa according to the specific
+                  requirements of each destination country.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingThree">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseThree"
+                    aria-expanded="false" aria-controls="tourCollapseThree">
+                    What are the conditions for elderly customers to
+                    join a
+                    tour? Can I book a tour directly for an elderly person
+                    without any conditions?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseThree" class="collapse" aria-labelledby="tourHeadingThree"
+                data-parent="#tourAccordion">
+                <div class="card-body">
+                  For female customers from 55 years old and male customers
+                  from 60 years old: Vietravel advises that it is best to
+                  have a relative who is sufficiently healthy (and under 55
+                  years old) accompany them to be able to provide timely
+                  assistance if an issue occurs during the tour. Especially
+                  for customers from 70 years old and above: it is mandatory
+                  to have a relative under 55 years old accompany them and
+                  submit a health check certificate, which includes a
+                  doctor's confirmation of fitness to travel + Health
+                  Commitment Form according to the company's template.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingFour">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseFour" aria-expanded="false"
+                    aria-controls="tourCollapseFour">
+                    What are the conditions for customers under 18 to
+                    register for a tour?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseFour" class="collapse" aria-labelledby="tourHeadingFour"
+                data-parent="#tourAccordion">
+                <div class="card-body">
+                  Guests under 18 years old must be accompanied by their
+                  parents or a relative over 18 years old. In the case
+                  where the guest under 18 is traveling with a relative,
+                  the parents must provide a power of attorney (authorized
+                  by local authorities) for the relative.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingFive">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseFive" aria-expanded="false"
+                    aria-controls="tourCollapseFive">
+                    Do I have to pay in full or can I make a
+                    deposit?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseFive" class="collapse" aria-labelledby="tourHeadingFive"
+                data-parent="#tourAccordion">
+                <div class="card-body">
+                  + In the case of purchasing online through the website
+                  www.viatrips.com and choosing the online payment method,
+                  please pay 100% of the tour value as specified in the
+                  booking confirmation.
+                  <br />
+                  + In the case of direct payment or bank transfer, you
+                  can pay a deposit of 50% of the tour value, and the
+                  remaining balance must be paid 7 - 10 days before the
+                  tour starts for normal days and 10-15 days before for
+                  holidays or Tet (Lunar New Year).
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingSix">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseSix" aria-expanded="false"
+                    aria-controls="tourCollapseSix">
+                    Where can I make a cash payment? Do I need to
+                    visit
+                    the company's office?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseSix" class="collapse" aria-labelledby="tourHeadingSix" data-parent="#tourAccordion">
+                <div class="card-body">
+                  For cash or bank card payments, customers can make
+                  payments at the head office located at: 302 Nguyen Van
+                  Dau street, district Binh Thanh, HCMC.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingSeven">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseSeven"
+                    aria-expanded="false" aria-controls="tourCollapseSeven">
+                    Can the company make payments using a bank card?
+                    Are
+                    there any fees for using the card?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseSeven" class="collapse" aria-labelledby="tourHeadingSeven"
+                data-parent="#tourAccordion">
+                <div class="card-body">
+                  Customers can use their card to make payments at the POS
+                  systems at Viatrips offices; however, the cardholder
+                  must be present. Viatrips will assist with the card
+                  payment fees. For international cards or credit cards
+                  used for payments in foreign currencies, Viatrips will
+                  also assist, but the customer will bear the currency
+                  conversion fees to Vietnamese Dong (VND), which depend
+                  on the bank and the timing of the transaction.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="tourHeadingEight">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#tourCollapseEight"
+                    aria-expanded="false" aria-controls="tourCollapseEight">
+                    Is the tour price inclusive of VAT? Can I
+                    request an
+                    invoice?
+                  </button>
+                </h5>
+              </div>
+              <div id="tourCollapseEight" class="collapse" aria-labelledby="tourHeadingEight"
+                data-parent="#tourAccordion">
+                <div class="card-body">
+                  All tours include VAT. In the case that a customer
+                  requests an invoice, please provide complete billing
+                  information immediately upon registering for the tour
+                  and completing payment. The invoice will be issued after
+                  the tour booking is finalized and will be sent to the
+                  customer's address as per request or collected directly.
+                  Invoices will not be issued after the tour has
+                  commenced.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="GroupBooking" class="tabcontent">
+          <div class="container title-container">
+            <div class="d-flex title-index">
+              <h2>Group Booking</h2>
+              <div class="underline-title"></div>
+            </div>
+          </div>
+          <div id="groupBookingAccordion">
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingOne">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseOne"
+                    aria-expanded="false" aria-controls="groupBookingCollapseOne">
+                    How do I start a group booking?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseOne" class="collapse" aria-labelledby="groupBookingHeadingOne"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  Initiate a group booking by selecting "Create Group" on
+                  the homepage. You will receive an invitation link, which
+                  you can share with other members to join the group.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingTwo">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseTwo"
+                    aria-expanded="false" aria-controls="groupBookingCollapseTwo">
+                    How can group members enter their personal
+                    information?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseTwo" class="collapse" aria-labelledby="groupBookingHeadingTwo"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  Each group member can access the shared group link and
+                  enter their personal information in the "Personal
+                  Information" section.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingThree">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseThree"
+                    aria-expanded="false" aria-controls="groupBookingCollapseThree">
+                    How do we share and pay individual bills?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseThree" class="collapse" aria-labelledby="groupBookingHeadingThree"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  When a booking is made, the system automatically
+                  calculates and shares the cost among each member. Each
+                  member will receive a notification about the amount to
+                  be paid and can make the payment online through
+                  supported payment methods.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingFour">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseFour"
+                    aria-expanded="false" aria-controls="groupBookingCollapseFour">
+                    Is this feature safe and does it protect
+                    personal
+                    information?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseFour" class="collapse" aria-labelledby="groupBookingHeadingFour"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  We are committed to the confidentiality of personal
+                  information. All personal data is used solely for
+                  booking purposes and is not shared with third parties.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingFive">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseFive"
+                    aria-expanded="false" aria-controls="groupBookingCollapseFive">
+                    What if a member wants to leave the group?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseFive" class="collapse" aria-labelledby="groupBookingHeadingFive"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  Members can leave the group at any time. However, if
+                  the booking has been confirmed, cancellation or
+                  changes may be subject to the cancellation policy of
+                  the booked service.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="groupBookingHeadingSix">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#groupBookingCollapseSix"
+                    aria-expanded="false" aria-controls="groupBookingCollapseSix">
+                    Can booking information be changed after
+                    completion?
+                  </button>
+                </h5>
+              </div>
+              <div id="groupBookingCollapseSix" class="collapse" aria-labelledby="groupBookingHeadingSix"
+                data-parent="#groupBookingAccordion">
+                <div class="card-body">
+                  Changes to booking information depend on the policy of
+                  each service and may incur change fees. It is
+                  recommended to contact the service provider directly
+                  for modifications.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Planning" class="tabcontent">
+          <div class="container title-container">
+            <div class="d-flex title-index">
+              <h2>Planning</h2>
+              <div class="underline-title"></div>
+            </div>
+          </div>
+          <div id="planningAccordion">
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="planningHeadingOne">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#planningCollapseOne"
+                    aria-expanded="false" aria-controls="planningCollapseOne">
+                    How do I start planning my trip on the website?
+                  </button>
+                </h5>
+              </div>
+              <div id="planningCollapseOne" class="collapse" aria-labelledby="planningHeadingOne"
+                data-parent="#planningAccordion">
+                <div class="card-body">
+                  Begin by creating an account and using the "Trip Planning"
+                  feature. Enter information about your destination, travel
+                  dates, and personal preferences, and the system will
+                  suggest a suitable itinerary.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="planningHeadingTwo">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#planningCollapseTwo"
+                    aria-expanded="false" aria-controls="planningCollapseTwo">
+                    Can the website suggest destinations for me?
+                  </button>
+                </h5>
+              </div>
+              <div id="planningCollapseTwo" class="collapse" aria-labelledby="planningHeadingTwo"
+                data-parent="#planningAccordion">
+                <div class="card-body">
+                  Yes, based on the information and preferences you provide,
+                  the system will recommend suitable destinations and
+                  activities for you.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="planningHeadingThree">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#planningCollapseThree"
+                    aria-expanded="false" aria-controls="planningCollapseThree">
+                    How do I receive reminders about my itinerary?
+                  </button>
+                </h5>
+              </div>
+              <div id="planningCollapseThree" class="collapse" aria-labelledby="planningHeadingThree"
+                data-parent="#planningAccordion">
+                <div class="card-body">
+                  You will automatically receive itinerary reminders via
+                  email and push notifications on your phone if you have
+                  installed our mobile app.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="planningHeadingFour">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#planningCollapseFour"
+                    aria-expanded="false" aria-controls="planningCollapseFour">
+                    Can I change my travel plans after they have been
+                    scheduled?
+                  </button>
+                </h5>
+              </div>
+              <div id="planningCollapseFour" class="collapse" aria-labelledby="planningHeadingFour"
+                data-parent="#planningAccordion">
+                <div class="card-body">
+                  Yes, you can change your travel plans at any time
+                  through the website.
+                </div>
+              </div>
+            </div>
+            <div class="card accordion-card">
+              <div class="card-header p-0" id="planningHeadingFive">
+                <h5 class="mb-0">
+                  <button class="collapsed" data-toggle="collapse" data-target="#planningCollapseFive"
+                    aria-expanded="false" aria-controls="planningCollapseFive">
+                    How do I cancel or modify my travel plans?
+                  </button>
+                </h5>
+              </div>
+              <div id="planningCollapseFive" class="collapse" aria-labelledby="planningHeadingFive"
+                data-parent="#planningAccordion">
+                <div class="card-body">
+                  You can cancel or modify your travel plans through the
+                  "My Plans" section on the website or app.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- still have a questions? -->
+  <div class="container">
+    <div class="row" id="stillhavequestion">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+        <h3>Still have questions?</h3>
+        <span>Can't find the answer you're looking for?</span>
+      </div>
+      <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+        <div class="row">
+          <div class="col-6">
+            <button class="btnstillhavequestion-FAQs" type="button">
+              Chat with us
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btnstillhavequestion-FAQs2" type="button">
+              Send via email
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact us -->
+  <div class="container contactusbox-FAQs" id="contactBox">
+    <div class="row">
+      <div class="col-6 d-none d-lg-block">
+        <img src="imgs/contactus-FAQs.png" class="img-fluid" />
+      </div>
+      <div class="col-xl-6 col-lg-6 col-12">
+        <div class="container title-container">
+          <div class="d-flex title-index">
+            <h2>Contact us</h2>
+            <div class="underline-title"></div>
+          </div>
+        </div>
+        <span class="title2-FAQs d-flex">Please send your inquiry to us via email</span>
+        <label class="labelcontactus-FAQs d-flex">Full name</label>
+        <input type="text" class="form-control" placeholder="Your name" id="input-FAQs" />
+        <label class="labelcontactus-FAQs d-flex">Email</label>
+        <input type="text" class="form-control" placeholder="Your email address" id="input-FAQs" />
+        <label class="labelcontactus-FAQs d-flex">Comment</label>
+        <textarea class="form-control" id="comment-FAQs" placeholder="Ask a question..." name="text"></textarea>
+        <button class="btncontactus-FAQs" type="button">
+          Send your question
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="d-md-none">
+      <div id="footerCollapse">
+        <div class="card">
+          <div class="card-header" id="AboutViatrips">
+            <button class="header-btn collapsed" data-toggle="collapse" data-target="#aboutViatrips"
+              aria-expanded="true" aria-controls="aboutViatrips">
+              About Viatrips
+            </button>
+          </div>
+
+          <div id="aboutViatrips" class="collapse" aria-labelledby="AboutViatrips" data-parent="#footerCollapse">
+            <div class="card-body">
+              <ul class="footer-link-items">
+                <li><a href="#">Our Story</a></li>
+                <li><a href="carrer.html">Carrers</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingExplore">
+            <button class="header-btn collapsed" data-toggle="collapse" data-target="#explore" aria-expanded="true"
+              aria-controls="explore">
+              Explore
+            </button>
+          </div>
+          <div id="explore" class="collapse" aria-labelledby="headingExplore" data-parent="#footerCollapse">
+            <div class="card-body">
+              <ul class="footer-link-items">
+                <li><a href="#">Airplane ticket</a></li>
+                <li><a href="#">Hotel</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Group booking</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingInformation">
+            <button class="header-btn collapsed" data-toggle="collapse" data-target="#information" aria-expanded="true"
+              aria-controls="information">
+              Information
+            </button>
+          </div>
+          <div id="information" class="collapse" aria-labelledby="headingInformation" data-parent="#footerCollapse">
+            <div class="card-body">
+              <ul class="footer-link-items">
+                <li><a href="#">Tour booking policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="d-none d-md-block col-4 col-md-3 col-lg-2 ">
+          <h4 class="footer-title">About Viatrips</h4>
+          <ul class="footer-link-items">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="carrer.html">Carrers</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="d-none d-md-block col-4 col-md-3 col-lg-2 ">
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-link-items">
+            <li><a href="#">Airplane ticket</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Tour</a></li>
+            <li><a href="#">Group booking</a></li>
+          </ul>
+        </div>
+        <div class="d-none d-md-block col-4 col-md-3 col-lg-2 ">
+          <h4 class="footer-title">Information</h4>
+          <ul class="footer-link-items">
+            <li><a href="#">Tour booking policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="d-none d-md-block col-5 col-md-3 col-lg-2 social-section ">
+          <h4 class="footer-title">Social media</h4>
+          <div class="d-flex">
+            <a href="#"><span class="icon-facebook social-icon"></span></a>
+            <a href="#"><span class="icon-instagram social-icon"></span></a>
+            <a href="#"><span class="icon-youtube social-icon"></span></a>
+          </div>
+          <div class="d-flex">
+            <a href="#"><span class="icon-discord social-icon"></span></a>
+            <a href="#"><span class="icon-tiktok social-icon"></span></a>
+            <a href="#"><span class="icon-twitter social-icon"></span></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-5 d-block d-md-none social-section ">
+              <div class="d-flex flex-wrap">
+                <a href="#"><span class="icon-facebook social-icon"></span></a>
+                <a href="#"><span class="icon-instagram social-icon"></span></a>
+                <a href="#"><span class="icon-youtube social-icon"></span></a>
+              </div>
+              <div class="d-flex flex-wrap">
+                <a href="#"><span class="icon-discord social-icon"></span></a>
+                <a href="#"><span class="icon-tiktok social-icon"></span></a>
+                <a href="#"><span class="icon-twitter social-icon"></span></a>
+              </div>
+            </div>
+            <div class="col-7 col-md-6 col-lg-12 ">
+              <h4 class="footer-title">Payment</h4>
+              <div class="d-flex flex-wrap">
+                <img src="imgs/visa.svg" class="payment-icon mb-md-0" />
+                <img src="imgs/paypal.svg" class="payment-icon mb-md-0" />
+                <img src="imgs/applepay.svg" class="payment-icon mb-md-0" />
+                <img src="imgs/vnpay.svg" class="payment-icon mb-md-0" />
+                <img src="imgs/samsungpay.svg" class="payment-icon mb-md-0" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-12 ">
+              <div class="input-group email-address">
+                <input placeholder="Enter Email Address" class="form-control email-input" />
+                <span class="input-group-append right-icon-container">
+                  <button class="btn border-0 text-white send-btn" type="button">
+                    <span class="icon-send send-icon"></span>
+                  </button>
+                </span>
+              </div>
+              <div class="receive-news mt-2">
+                <input type="checkbox" checked="checked" class="checkbox" />
+                <span class="checkmark"></span>
+                Yes, i want to receive news and products emails. Please read our
+                <a href="#">privacy policy.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright text-center">
+      Copyright © 2023 Viatrips. All rights reserved.
+    </div>
+  </footer>
+  <!-- Footer -->
+
+   <!-- chatbox -->
+   <button class="chatbox-open">
+    <img src="imgs/avatar-viatrips.svg" class="img-fluid">
+  </button>
+  <button class="chatbox-close">
+    <span class="icon-closelight icon-chatbox"></span></button>
+  <section class="chatbox-popup">
+    <header class="chatbox-popup__header">
+      <aside style="flex:2">
+        <img src="imgs/avatar3-viatrips.svg" class="img-fluid">
+      </aside>
+      <aside style="flex:8">
+        <div class="row">
+          <h1 class="chat-box-title mr-2 ml-3">Viatrips</h1> <span class="icon-tick tickxanh"><span class="path1"></span><span
+              class="path2"></span><span class="path3"></span></span>
+        </div>
+        <span class="ml-1">Staff (Online)</span>
+      </aside>
+      <aside style="flex:1">
+        <button class="chatbox-maximize"><span class="icon-select-window  icon-chatbox"></span></button>
+      </aside>
+    </header>
+    <main class="chatbox-popup__main">
+      <h5>15:30</h5>
+          <div id="message-chatbox">
+            <span>Hi there!<br>
+              Welcome to Viatrips's services. Please choose your desired departure point?</span>
+          </div>
+      </div>
+    </main>
+    <footer class="chatbox-popup__footer">
+
+      <aside style="flex:20">
+        <textarea type="text" placeholder="Type your message here..." autofocus></textarea>
+      </aside>
+      <aside style="flex:1;color:#888;text-align:center;">
+        <span class="icon-send icon-chatbox" style="color:#4340D8"></span>
+      </aside>
+    </footer>
+  </section>
+  <section class="chatbox-panel">
+    <header class="chatbox-panel__header">
+      <aside style="flex:2">
+        <img src="imgs/avatar2-viatrips.svg" class="img-fluid">
+      </aside>
+      <aside style="flex:6">
+        <div class="row">
+          <h1 class="chat-box-title mr-2 ml-3">Viatrips</h1> <span class="icon-tick tickxanh"><span class="path1"></span><span
+              class="path2"></span><span class="path3"></span></span>
+        </div>
+        <span class="ml-1">Staff (Online)</span>
+      </aside>
+      <aside style="flex:3;text-align:right;">
+        <button class="chatbox-minimize"><span class="icon-select-window icon-chatbox"></span></button>
+        <button class="chatbox-panel-close"><span class="icon-closelight icon-chatbox"></span></button>
+      </aside>
+    </header>
+    <main class="chatbox-panel__main" style="flex:1">
+      <h5>15:30</h5>
+      <div id="message-chatbox">
+        <span>Hi there!<br>
+          Welcome to Viatrips's services. Please choose your desired departure point?</span>
+      </div>
+
+    <div id="message-btn-box">
+      <button class="btn primary-button" id="message-btn">The North</button>
+      <button class="btn primary-button" id="message-btn">The Central</button>
+      <button class="btn primary-button" id="message-btn">The South</button>
+  </div>
+    </main>
+    <footer class="chatbox-panel__footer">
+
+      <aside style="flex:15">
+        <textarea type="text" placeholder="Type your message here..." autofocus></textarea>
+      </aside>
+      <aside style="flex:1;color:#888;text-align:center;">
+        <span class="icon-send icon-chatbox" style="color: #4340D8;"></span>
+      </aside>
+    </footer>
+  </section> <!-- chatbox -->
+
+
+ <!-- js chatbox -->
+ <script>
+  $(".chatbox-open").click(() =>
+    $(".chatbox-popup, .chatbox-close").fadeIn()
+  );
+
+  $(".chatbox-close").click(() =>
+    $(".chatbox-popup, .chatbox-close").fadeOut()
+  );
+
+  $(".chatbox-maximize").click(() => {
+    $(".chatbox-popup, .chatbox-open, .chatbox-close").fadeOut();
+    $(".chatbox-panel").fadeIn();
+    $(".chatbox-panel").css({ display: "flex" });
+  });
+
+  $(".chatbox-minimize").click(() => {
+    $(".chatbox-panel").fadeOut();
+    $(".chatbox-popup, .chatbox-open, .chatbox-close").fadeIn();
+  });
+
+  $(".chatbox-panel-close").click(() => {
+    $(".chatbox-panel").fadeOut();
+    $(".chatbox-open").fadeIn();
+  });
+</script> <!-- js chatbox -->
+
+
+<!-- js top btn -->
+<script>
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#scroll-to-top").fadeIn();
+    } else {
+      $("#scroll-to-top").fadeOut();
+    }
+  });
+
+  $("#scroll-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+</script> <!-- js top btn -->
+</body>
+
+</html>

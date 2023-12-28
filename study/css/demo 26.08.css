@@ -1,0 +1,12 @@
+.redcol{
+    height: 40px;
+    background-color: rgb(250, 215, 215);
+    margin-bottom: 10px;
+    border: solid 1.5pt red;
+}
+.greencol{
+    height:40px;
+    background-color: rgb(208, 247, 220);
+    margin-bottom: 10px;
+    border: solid 1.5pt green;
+}

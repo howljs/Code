@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  color: blue;
+}
+
+.p1 {
+  color: white;
+  background-color: gray;
+}
+
+.p2 {
+  text-align: left;
+}
+
+.p3 {
+  text-align: center;
+}
+
+.p4 {
+  text-align: right;
+}
+
+.p5 {
+  text-decoration: underline;
+}
+
+.p6 {
+  text-decoration: overline;
+}
+
+.p7 {
+  text-decoration: line-through;
+}
+
+.p8 {
+  text-indent: 40px;
+}

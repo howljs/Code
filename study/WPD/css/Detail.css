@@ -1,0 +1,72 @@
+/* dành riêng cho detail */
+#breadcrumb {
+  height: 30px;
+  background-color: aqua;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* CONTENT */
+#bigimgbox {
+}
+#detail {
+  height: 500px;
+  background-color: orange;
+  border: solid 1px orangered;
+}
+
+#smallimgbox {
+}
+
+/* XL */
+@media (min-width: 1200px) {
+  #smallimgbox img {
+    margin-bottom: 10px;
+  }
+}
+/* L */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #smallimgbox img {
+    margin-bottom: 10px;
+  }
+}
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  #smallimgbox img {
+    margin-bottom: 10px;
+  }
+}
+/* SM */
+@media (min-width: 576px) and (max-width: 767px) {
+  #imgbox {
+    margin-bottom: 20px;
+  }
+  #smallimgbox {
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  #smallimgbox img {
+    width: 85px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+/* XS */
+@media (max-width: 575px) {
+  #imgbox {
+    margin-bottom: 20px;
+  }
+  #smallimgbox {
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  #smallimgbox img {
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,67 @@
+/* dành riêng cho contact us */
+#imgcontact img{
+    border-radius: 20px;
+}
+.boldtext {
+  font-family: sans-serif;
+  font-weight: 700;
+}
+#contact .row {
+  margin-bottom: 20px;
+}
+#radiobox label{
+    margin-right: 60px;
+}
+textarea{
+    resize: none;
+}
+#contactbtn{
+    display: flex;
+    justify-content: center;
+}
+#contactbtn ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+#contactbtn li{
+    display: block;
+    float: left;
+}
+#submitbtn, #resetbtn{
+    font-weight: 500;
+    display: block;
+    font-size: 16px;
+    padding: 8px 40px;
+    margin-right: 24px;
+    margin-left: 24px;
+    border: none;
+    border-radius: 8px;
+}
+#submitbtn{
+    background-color: #ed6320;
+    color: white;
+}
+#submitbtn:hover{
+    background-color: black;
+transition: all ease .5s;
+}
+.form-control:focus{
+    outline: none!important;
+    border-color: #ed6320;
+    box-shadow: none !important;
+}
+@media (min-width: 1200px) {
+}
+/* L */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* SM */
+@media (min-width: 576px) and (max-width: 767px) {
+}
+/* XS */
+@media (max-width: 575px) {
+}

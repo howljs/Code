@@ -1,0 +1,29 @@
+ol{
+    list-style-type: none;
+}
+ul{
+    list-style-type: circle;
+}
+#navi ul{
+    list-style-type: none;
+    margin: 50px;
+    padding-left: 60px;
+}
+#navi ul li{
+    float: left;
+    display: block;
+}
+#navi ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: made tommy soft;
+    font-size: 16pt;
+    padding: 8px 16px;
+    text-align: center;
+}
+#navi ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    transition: all ease .5s;
+}

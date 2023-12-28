@@ -1,0 +1,60 @@
+/* dành riêng cho Home */
+/* banner 1 */
+/* XL */
+#banner1 {
+  padding: 0px;
+}
+.carousel-indicators li {
+  height: auto;
+  width: 80px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-indent: 0px;
+}
+.carousel-caption {
+  height: 100px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+@media (min-width: 1200px) {
+  #banner1 {
+  }
+}
+/* L */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #banner1 {
+  }
+}
+/* MD */
+@media (min-width: 768px) and (max-width: 991px) {
+  #banner1 {
+  }
+}
+/* SM */
+@media (min-width: 576px) and (max-width: 767px) {
+  #banner1 {
+  }
+  .carousel-indicators li {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    text-indent: -999px;
+  }
+}
+/* XS */
+@media (max-width: 575px) {
+  #banner1 {
+
+  }
+  .carousel-indicators li {
+    height: 8px;
+    width: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    text-indent: -999px;
+  }
+}

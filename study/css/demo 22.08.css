@@ -1,0 +1,46 @@
+#Buynowbtn{
+    color: white;
+    background-color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    display: block;
+    width: 198px;
+    height: 48px;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 16px;
+    margin-left: 10px;
+    transition: all ease-in-out .5s;
+}
+#Buynowbtn:hover{
+    width: 198px;
+    height: 48px;
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+}
+#Viewmorebtn:hover{
+    background-color: black;
+    color: white;
+}
+#Viewmorebtn{
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    text-decoration: none;
+    display: block;
+    width: 198px;
+    height: 48px;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    float: left;
+    transition: all ease .3s;
+}
+div{
+    clear: both;
+}

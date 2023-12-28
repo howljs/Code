@@ -1,0 +1,329 @@
+/* Banner 1 Blog Detail */
+#banner1-Blogdetail {
+    width: 100%;
+    height:auto;
+    margin:0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+#banner1-Blogdetail img {
+    width: 100%; /* Đảm bảo rằng hình ảnh sẽ chiếm toàn bộ chiều rộng của phần tử cha */
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh theo tỉ lệ của hình ảnh */
+    max-width: 100%; /* Giữ cho hình ảnh không vượt quá kích thước chiều rộng của phần tử cha */
+    display: block; /* Loại bỏ khoảng trống dưới hình ảnh khi nó là một phần tử inline */
+    margin: 0 auto; /* Canh giữa hình ảnh trong phần tử cha */
+}
+/* breadcrumb */
+.breadcrumb-container .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  padding-left: -15px;
+  padding-right: -15px;
+  font-size: 14px;
+}
+
+.breadcrumb-container .breadcrumb-item {
+  align-items: center;
+  display: flex;
+}
+
+.breadcrumb-item > a {
+  color: #5C6470;
+  text-decoration: none;
+}
+.breadcrumb-item > a:hover {
+  color: #4340d8;
+  text-decoration: none;
+}
+
+.breadcrumb-icon {
+  font-size: 24px;
+  display: block;
+}
+
+.breadcrumb-container .breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 8px;
+  color: #5C6470;
+  content: "\e947";
+  font-family: "viatrips";
+  font-size: 16px;
+}
+
+.breadcrumb-item.active > a {
+  color: #8F97A3;
+}
+/* Title Announcement */
+.title-Blogdetail h2{
+    justify-content: center;
+    font-size: 24px;
+    color: #4340d8;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+.underline-title-Blogdetail {
+    width: 40px;
+    height: 4px;
+    background-color: #FFCA00;
+    border-radius: 2px;
+    margin-bottom: 0px;
+    margin-right: 168px;
+    float: right;
+}
+.underline-titleExplore-Blogdetail {
+    width: 40px;
+    height: 4px;
+    background-color: #FFCA00;
+    border-radius: 2px;
+    margin-bottom: 24px;
+    margin-right: 212px;
+    float: right;
+}
+.underline-titleReviews-Blogdetail {
+  width: 40px;
+  height: 4px;
+  background-color: #FFCA00;
+  border-radius: 2px;
+  margin-bottom: 24px;
+  margin-right: 209px;
+  float: right;
+}
+/* Blog Card */
+.cardd{
+  width: 100%;
+  height: 411px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.card-img-holder{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.card-img-holder img{
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-title{
+  color:black;
+  padding: 16px 0 0 0;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.description{
+  padding: 8px 0 0 0;
+  color: black;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight:500;
+  margin-bottom: 0px;
+}
+
+.blog-time{
+  font-size:14px;
+  font-weight:600;
+  line-height: 16px;
+  color: black;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.options a{
+  padding-left:62%;
+  padding-top: 24px;
+  font-weight: 600;
+  color: #4340D8;
+}
+#titleExplore{
+  margin-top: 0px;
+}
+/* Content Explore */
+.TitleExplore-Blog h1{
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+  color: black;
+}
+.Upby-Blog{
+  font-size: 14px;
+  line-height: 16px;
+  margin:0;
+  padding-top: 4px;
+  color: #737D8C;
+}
+.ContentExplore-Blog{
+font-size:16px;
+line-height: 18px;
+margin-bottom: 0px;
+color:black;
+}
+.TitleExplore-Blog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Content Reviews */
+.ContentReviews-Blogs1 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-top: 16px;
+  color: black;
+}
+.ContentReviews-Blogs2 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding-top: 4px;
+  color: #737D8C;
+}
+.Post h1{
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.ContentReviews-Blogs img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.ContentReviews-Blogs p{
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: -45px;
+  margin-left: 18px;
+  position: absolute;
+}
+.ContentReviews-BlogsAnhNho img{
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* Post */
+.Post img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* XL */
+@media (min-width:1200px) {
+  .cardd{
+    height: 430px;
+  }
+}
+/* LG */
+@media (min-width:992px) and (max-width:1199px) {
+  .options a{
+    padding-left:56%;
+    padding-top: 16px;
+    font-weight: 600;
+    color: #4340D8;
+  }
+  .cardd{
+    height: 400px;
+  }
+}
+/* MD */
+@media (min-width:768px) and (max-width:991px) {
+  .options a{
+    padding-left:56%;
+    padding-top: 16px;
+    font-weight: 600;
+    color: #4340D8;
+  }
+  .cardd{
+    height: 420px;
+  }
+  .TitleExplore-Blog img {
+    margin-top: 24px;
+  }
+  .ContentReviews-BlogsAnhNho img{
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+/* SM */
+@media (min-width:576px) and (max-width:767px) {
+  .options a{
+    padding-left:75%;
+    padding-top: 16px;
+    font-weight: 600;
+    color: #4340D8;
+  }
+  .cardd{
+    height: 440px;
+  }
+  .TitleExplore-Blog img {
+    margin-top: 24px;
+  }
+  .ContentReviews-Blogs img{
+    padding-bottom: 24px;
+  }
+  .ContentReviews-Blogs p{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -70px;
+    margin-left: 18px;
+    position: absolute;
+  }
+}
+
+/* XS */
+@media (max-width:575px) {
+  .options a{
+    padding-left:65%;
+    padding-top: 16px;
+    font-weight: 600;
+    color: #4340D8;
+  }
+  .cardd{
+    height: 440px;
+  }
+  .TitleExplore-Blog img {
+    margin-top: 8px;
+  }
+  .ContentReviews-Blogs img{
+    padding-bottom: 24px;
+  }
+  .ContentReviews-Blogs p{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -65px;
+    margin-left: 18px;
+    position: absolute;
+  }
+}
+  
